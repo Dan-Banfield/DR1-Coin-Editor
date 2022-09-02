@@ -2,9 +2,13 @@ namespace DR1_Coin_Editor
 {
     public partial class MainForm : Form
     {
-        #region Global Variables
+        #region Offsets
 
         private const int COINS_OFFSET = 0x4A4;
+
+        #endregion
+
+        #region Global Variables
 
         private string selectedSaveFileLocation = "";
 
@@ -54,7 +58,7 @@ namespace DR1_Coin_Editor
         {
             string[] droppedFileLocation = (string[])e.Data.GetData(DataFormats.FileDrop);
 
-            if (File.Exists(droppedFileLocation[0]))
+            if (File.Exists(droppedFileLocation[0]) && droppedFileLocation[0].EndsWith(".vfs"))
                 SelectedSaveFileLocation = droppedFileLocation[0];
         }
 
