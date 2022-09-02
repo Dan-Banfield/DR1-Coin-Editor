@@ -33,10 +33,10 @@
             this.saveFileLocationTextBox = new System.Windows.Forms.TextBox();
             this.selectSaveFileButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.modifySaveFileButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.coinsAmountNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.coinsAmountNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,11 +51,14 @@
             // 
             // saveFileLocationTextBox
             // 
+            this.saveFileLocationTextBox.AllowDrop = true;
             this.saveFileLocationTextBox.Location = new System.Drawing.Point(12, 69);
             this.saveFileLocationTextBox.Name = "saveFileLocationTextBox";
             this.saveFileLocationTextBox.Size = new System.Drawing.Size(482, 23);
             this.saveFileLocationTextBox.TabIndex = 1;
             this.saveFileLocationTextBox.TabStop = false;
+            this.saveFileLocationTextBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.saveFileLocationTextBox_DragDrop);
+            this.saveFileLocationTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.saveFileLocationTextBox_DragEnter);
             // 
             // selectSaveFileButton
             // 
@@ -67,6 +70,7 @@
             this.selectSaveFileButton.TabStop = false;
             this.selectSaveFileButton.Text = "...";
             this.selectSaveFileButton.UseVisualStyleBackColor = true;
+            this.selectSaveFileButton.Click += new System.EventHandler(this.selectSaveFileButton_Click);
             // 
             // label2
             // 
@@ -78,17 +82,18 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Options";
             // 
-            // button1
+            // modifySaveFileButton
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(558, 33);
-            this.button1.TabIndex = 4;
-            this.button1.TabStop = false;
-            this.button1.Text = "Modify save file!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.modifySaveFileButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.modifySaveFileButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.modifySaveFileButton.Location = new System.Drawing.Point(12, 217);
+            this.modifySaveFileButton.Name = "modifySaveFileButton";
+            this.modifySaveFileButton.Size = new System.Drawing.Size(558, 33);
+            this.modifySaveFileButton.TabIndex = 4;
+            this.modifySaveFileButton.TabStop = false;
+            this.modifySaveFileButton.Text = "Modify save file!";
+            this.modifySaveFileButton.UseVisualStyleBackColor = true;
+            this.modifySaveFileButton.Click += new System.EventHandler(this.modifySaveFileButton_Click);
             // 
             // label3
             // 
@@ -100,19 +105,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Coins:";
             // 
-            // numericUpDown1
+            // coinsAmountNumericUpDown
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(87, 162);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.coinsAmountNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.coinsAmountNumericUpDown.Location = new System.Drawing.Point(87, 162);
+            this.coinsAmountNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(481, 29);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.coinsAmountNumericUpDown.Name = "coinsAmountNumericUpDown";
+            this.coinsAmountNumericUpDown.Size = new System.Drawing.Size(481, 29);
+            this.coinsAmountNumericUpDown.TabIndex = 6;
+            this.coinsAmountNumericUpDown.Value = new decimal(new int[] {
             999,
             0,
             0,
@@ -123,9 +128,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 262);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.coinsAmountNumericUpDown);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.modifySaveFileButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectSaveFileButton);
             this.Controls.Add(this.saveFileLocationTextBox);
@@ -137,7 +142,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DR1 Coin Editor";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coinsAmountNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,8 +154,8 @@
         private TextBox saveFileLocationTextBox;
         private Button selectSaveFileButton;
         private Label label2;
-        private Button button1;
+        private Button modifySaveFileButton;
         private Label label3;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown coinsAmountNumericUpDown;
     }
 }
