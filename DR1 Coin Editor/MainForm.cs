@@ -46,17 +46,17 @@ namespace DR1_Coin_Editor
         }
 
         private void modifySaveFileButton_Click(object sender, EventArgs e)
-            => ModifySaveFile(SelectedSaveFileLocation, (ushort)coinsAmountNumericUpDown.Value);
+            => ModifySaveFile(SelectedSaveFileLocation, (short)coinsAmountNumericUpDown.Value);
 
         private void saveFileLocationTextBox_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+            if (e.Data!.GetDataPresent(DataFormats.FileDrop, false) == true)
                 e.Effect = DragDropEffects.All;
         }
 
         private void saveFileLocationTextBox_DragDrop(object sender, DragEventArgs e)
         {
-            string[] droppedFileLocation = (string[])e.Data.GetData(DataFormats.FileDrop);
+            string[] droppedFileLocation = (string[])e.Data!.GetData(DataFormats.FileDrop);
 
             if (File.Exists(droppedFileLocation[0]) && droppedFileLocation[0].EndsWith(".vfs"))
                 SelectedSaveFileLocation = droppedFileLocation[0];
@@ -66,7 +66,7 @@ namespace DR1_Coin_Editor
 
         #region Methods
 
-        private async void ModifySaveFile(string saveFileLocation, ushort coinsAmount)
+        private async void ModifySaveFile(string saveFileLocation, short coinsAmount)
         {
             if (!File.Exists(saveFileLocation))
             {

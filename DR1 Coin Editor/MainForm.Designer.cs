@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 21);
+            this.label1.Location = new System.Drawing.Point(11, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 32);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // saveFileLocationTextBox
             // 
             this.saveFileLocationTextBox.AllowDrop = true;
-            this.saveFileLocationTextBox.Location = new System.Drawing.Point(12, 69);
+            this.saveFileLocationTextBox.Location = new System.Drawing.Point(11, 65);
             this.saveFileLocationTextBox.Name = "saveFileLocationTextBox";
             this.saveFileLocationTextBox.Size = new System.Drawing.Size(482, 23);
             this.saveFileLocationTextBox.TabIndex = 1;
@@ -63,7 +63,7 @@
             // selectSaveFileButton
             // 
             this.selectSaveFileButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.selectSaveFileButton.Location = new System.Drawing.Point(502, 68);
+            this.selectSaveFileButton.Location = new System.Drawing.Point(501, 64);
             this.selectSaveFileButton.Name = "selectSaveFileButton";
             this.selectSaveFileButton.Size = new System.Drawing.Size(68, 25);
             this.selectSaveFileButton.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 114);
+            this.label2.Location = new System.Drawing.Point(11, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 32);
             this.label2.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             this.modifySaveFileButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.modifySaveFileButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.modifySaveFileButton.Location = new System.Drawing.Point(12, 217);
+            this.modifySaveFileButton.Location = new System.Drawing.Point(11, 213);
             this.modifySaveFileButton.Name = "modifySaveFileButton";
             this.modifySaveFileButton.Size = new System.Drawing.Size(558, 33);
             this.modifySaveFileButton.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(12, 157);
+            this.label3.Location = new System.Drawing.Point(11, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 30);
             this.label3.TabIndex = 5;
@@ -108,7 +108,7 @@
             // coinsAmountNumericUpDown
             // 
             this.coinsAmountNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coinsAmountNumericUpDown.Location = new System.Drawing.Point(87, 162);
+            this.coinsAmountNumericUpDown.Location = new System.Drawing.Point(86, 158);
             this.coinsAmountNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
