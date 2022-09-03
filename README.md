@@ -14,3 +14,7 @@ It's as easy as:
 ## Installation
 
 In order to run this application, you must have the .NET 6.0 runtime installed on your computer. You can download the latest version from [here.](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.8-windows-x64-installer)
+
+## Screenshots
+
+![Application Screenshot](https://raw.githubusercontent.com/Dan-Banfield/DR1-Coin-Editor/master/DR1%20Coin%20Editor/Demo%20Screenshot.png)
